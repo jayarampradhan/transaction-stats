@@ -84,7 +84,7 @@ public class TransactionStatisticsService {
 
     private static class TransactionStats {
         private volatile double sum;
-        private volatile Long count;
+        private volatile Long count = 0L;
         private volatile double max;
         private volatile double min;
     }
