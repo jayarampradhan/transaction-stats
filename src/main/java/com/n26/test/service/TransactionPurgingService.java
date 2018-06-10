@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+/**
+ * A separate thread will be responsible for deleting the expiry transactions and updating the statistics.
+ */
 @Service
 public class TransactionPurgingService {
 

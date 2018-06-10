@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.DelayQueue;
 
+/**
+ * This stores the transactions in {@link DelayQueue}, which will help us in expiry of the transactions.
+ * Actual statistics is pre computed and stored in {@link #transactionStats} when a actual transaction being stored into the {@link #transactionStore}, which will help to achieve the O(1) time.
+ */
 @Service
 public class TransactionStatisticsService {
 
