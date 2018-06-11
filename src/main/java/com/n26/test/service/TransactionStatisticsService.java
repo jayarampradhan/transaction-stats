@@ -32,7 +32,7 @@ public class TransactionStatisticsService {
         if (isExpired(transaction)) {
             throw new IllegalStateException("Transaction Expired");
         }
-        transactionStore.offer(new ExpiringKey<>(transaction, EXPIRY_PERIOD));
+        transactionStore.offer(new ExpiringKey<>(transaction, EXPIRY_PERIOD - (System.currentTimeMillis() - transaction.getTimeStamp())));
         addToStatistics(transaction);
     }
 
