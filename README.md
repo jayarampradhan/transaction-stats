@@ -3,3 +3,5 @@ curl localhost:8080/transactions -H 'Content-Type: application/json' -d '{"amoun
 
 curl localhost:8080/statistics
 ```
+
+- Application entry point `StartApp.java`
